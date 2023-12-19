@@ -1,6 +1,6 @@
 FROM tomcat:8.0.20-jre8
 
-MAINTAINER Ashok <ashok@oracle.com>
+MAINTAINER Wudi <wudixo@iot.io>
 
 EXPOSE 8080
 
