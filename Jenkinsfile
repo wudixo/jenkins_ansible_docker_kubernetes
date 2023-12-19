@@ -11,7 +11,7 @@ pipeline {
     stages {
         stage('Clone') {
             steps {
-               git 'https://github.com/ashokitschool/maven-web-app.git'
+               git 'https://github.com/wudixo/jenkins_ansible_docker_kubernetes.git'
             }
         }
         stage('Build') {
