@@ -1,11 +1,11 @@
 pipeline {
   
     agent {
-        label 'Ansible-Node'
+        label 'slavenode'
     }
     
     tools{
-        maven "Maven-3.9.6"
+        maven "maven-3.9.6"
     }
 
     stages {
