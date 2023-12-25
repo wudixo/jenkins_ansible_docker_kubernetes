@@ -11,7 +11,7 @@
        src: target
        dest: /home/ansible
     - name : Build Docker Image
-      command: docker build -t ashokit/mavenwebapp .
+      command: docker build -t wudixo/mavenwebapp .
     - name : Push Docker Image
       command: docker push wudixo/mavenwebapp
 - name: Second Play - K8S Deployment
