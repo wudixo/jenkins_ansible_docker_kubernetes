@@ -1,25 +1,24 @@
 pipeline {
-  
+    
     agent {
-        label 'slavenode'
+         label 'ansible-node'
     }
     
     tools{
-        maven "maven-3.9.6"
+        maven 'maven'
     }
 
     stages {
-        stage('Clone') {
+        stage('Git Clone') {
             steps {
-               git 'https://github.com/wudixo/jenkins_ansible_docker_kubernetes.git'
+                git 'https://github.com/wudixo/jenkins_ansible_docker_kubernetes.git'
             }
         }
-        stage('Build') {
+        stage('Maven Build') {
             steps {
-               sh 'mvn clean package'
+                sh 'mvn clean package'
             }
         }
-        
         stage('Create Image'){
             steps{
                steps {
