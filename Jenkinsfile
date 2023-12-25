@@ -1,10 +1,9 @@
 pipeline {
-    
     agent {
-         label 'ansible-node'
+        label 'ansible-node'
     }
     
-    tools{
+    tools {
         maven 'maven'
     }
 
@@ -19,12 +18,10 @@ pipeline {
                 sh 'mvn clean package'
             }
         }
-        stage('Create Image'){
-            steps{
-               steps {
-                	script {
-                		sh 'ansible-playbook task.yml'
-                	}
+        stage('Create Image') {
+            steps {
+                script {
+                    sh 'ansible-playbook task.yml'
                 }
             }
         }
