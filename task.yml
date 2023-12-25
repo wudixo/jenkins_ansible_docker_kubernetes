@@ -12,15 +12,4 @@
        dest: /home/ansible
     - name : Build Docker Image
       command: docker build -t ashokit/mavenwebapp .
-    - name : Push Docker Image
-      command: docker push ashokit/mavenwebapp
-- name: Second Play - K8S Deployment
-  hosts: eks
-  tasks:
-   - name: Copy K8S Manifest yml
-     copy:
-       src: k8s-deploy.yml
-       dest: /home/ansible
-   - name : K8S Deployment
-     command: kubectl apply -f k8s-deploy.yml
 ...
