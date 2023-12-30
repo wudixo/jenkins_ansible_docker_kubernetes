@@ -15,7 +15,7 @@
     - name : Push Docker Image
       command: docker push wudixo/mavenwebapp
 - name: Second Play - K8S Deployment
-  hosts: k8s
+  hosts: kubernetes
   tasks:
    - name: Copy K8S Manifest yml
      copy:
